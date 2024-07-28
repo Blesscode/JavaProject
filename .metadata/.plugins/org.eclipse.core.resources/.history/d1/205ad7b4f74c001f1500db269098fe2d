@@ -1,0 +1,24 @@
+package currencyConverter;
+
+public class RupeeToDollar {
+	double rupee;
+	double dollar;
+	double dollarValue=83.72;
+	
+	RupeeToDollar(double rupee){
+		this.rupee=rupee;
+		
+	}
+	
+	void toDollar() {
+		this.dollar=rupee/dollarValue;	
+	}
+
+	@Override
+	public String toString() {
+		return "RupeeToDollar [rupee=" + rupee + ", dollarValue=" + dollarValue + "]";
+	}
+	
+	
+	
+}

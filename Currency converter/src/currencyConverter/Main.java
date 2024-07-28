@@ -1,0 +1,48 @@
+package currencyConverter;
+import java.util.Scanner;
+public class Main {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		
+		
+		Scanner sc=new Scanner(System.in);
+		try {
+			System.out.println("Enter 1 for Rupee to dollar conversion");
+			System.out.println("Enter 2 for dollar to Rupee conversion");
+		    int choice=sc.nextInt();
+		
+		    switch( choice) {
+		       case 1:
+			        double rupee;
+			        System.out.println("enter value");
+			        rupee=sc.nextDouble();
+			        RupeeToDollar rupeetodollar =new RupeeToDollar(rupee);
+			        rupeetodollar.toDollar();
+			        System.out.println(rupeetodollar.toString());
+			        break;
+			
+		      case 2:
+			        double dollar;
+			        System.out.println("enter value");
+			        dollar=sc.nextDouble();
+			        DollarToRupee  dollartorupee=new DollarToRupee(dollar);
+			        dollartorupee.toRupee();
+			        System.out.println(dollartorupee.toString());
+			        break;
+			   default:
+				   System.out.println("Invalid choice. Please select option 1 or 2.");
+                   break;
+		      }
+		}catch(Exception e) {
+			System.out.println("ERROE!"+e.getMessage());
+		}
+		finally {
+			sc.close();
+		}
+		
+		
+		
+	}
+
+}

@@ -1,0 +1,25 @@
+package bmiCalculator;
+import static java.lang.Math.*;
+
+
+public class BMI {
+ private float height;
+ private float weight;
+ private float bmi;
+ public BMI(float height, float weight) {
+	this.height = height;
+	this.weight = weight;
+ }
+ 
+ void calcBMI() {
+	 bmi=(float)(weight/pow(height,2));
+ }
+
+@Override
+public String toString() {
+	return "BMI [height=" + height + ", weight=" + weight + ", BMI=" + String.format(".2f", bmi)+ "]";
+}
+
+ 
+ 
+}

@@ -1,0 +1,16 @@
+package currencyConverter;
+import java.util.*;
+public class Main {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		double rupee;
+		try(Scanner sc=new Scanner(System.in)){
+		rupee=sc.nextDouble();
+		RupeeToDollar val1=new RupeeToDollar(rupee);
+		val1.toDollar();
+		System.out.println(val1.toString());
+		}
+	}
+
+}

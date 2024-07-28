@@ -1,0 +1,18 @@
+package bmiCalculator;
+import java.util.*;
+public class Main {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		Scanner sc=new Scanner(System.in);
+		System.out.println("Enter weight in Kg");
+		System.out.println("Enter height in m");
+		float weight=sc.nextFloat();
+		float height=sc.nextFloat();
+		BMI bmi=new BMI(weight,height);
+		bmi.calcBMI();
+		System.out.println(bmi.toString());
+		sc.close();
+	}
+
+}
